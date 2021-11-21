@@ -32,6 +32,7 @@ class ErrorCollection implements \Countable
      *
      * @return integer
      */
+	#[\ReturnTypeWillChange]
     public function count()
     {
         return $this->deepSize();
