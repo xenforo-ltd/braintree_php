@@ -251,7 +251,7 @@ class TransparentRedirectGateway
             ]
         );
         ksort($trDataParams);
-        $urlEncodedData = http_build_query($trDataParams, null, "&");
+        $urlEncodedData = http_build_query($trDataParams);
         $signatureService = new SignatureService(
             $this->_config->privateKey(),
             "Braintree\Digest::hexDigestSha1"
